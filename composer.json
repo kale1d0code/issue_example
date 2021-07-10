@@ -1,0 +1,28 @@
+{
+    "name": "yourmonorepo/yourmonorepo",
+    "description": "Repository for demonstrating issue",
+    "require-dev": {
+        "symplify/easy-coding-standard": "^9.4",
+        "symplify/monorepo-builder": "^9.4"
+    },
+    "authors": [
+        {
+            "name": "kale1d0code"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "YourMonorepo\\FirstPackage\\": "packages/first-package/src",
+            "YourMonorepo\\SecondPackage\\": "packages/second-package/src"
+        }
+    },
+    "scripts": {
+        "lint": "vendor/bin/ecs check",
+        "merge": "vendor/bin/monorepo-builder merge",
+        "validate-repo": "vendor/bin/monorepo-builder validate"
+    },
+    "config": {
+        "sort-packages": true,
+        "platform-check": false
+    }
+}
